@@ -1,0 +1,19 @@
+def trainSVM(n = 100, X = np.zeros([60000,784]), y = np.zeros([60000,1])):
+	clf = SVC(C = 1.0)
+	clf.fit(X[:n],y[:n])
+	return clf
+
+def errorRate(n = 100):
+	trainingdata = sio.loadmat('train.mat')
+	X = np.swapaxes(trainingdata['train_images'].reshape(784,60000), 0, 1)
+	y = trainingdata['train_labels']
+	X, y = utils.shuffle(X,y)
+	clf = trainSVM(n, X, y)
+	wrong = 0
+	Z = clf.predict(X)
+	for i in range(0,10000):
+		if Z[i] != y[i]:
+			wrong = wrong + 1
+		else:
+	print('error is: ')
+	return wrong/10000.0

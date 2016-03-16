@@ -1,0 +1,6 @@
+Kevin Chau
+23816929
+
+HOW TO RUN THE CODE
+The code for problems 1, 2, and 3 can be found in digitSVM.py. To use digitSVM.py, make sure it is in the digit-dataset/ directory, or equivalently in the same folder as train.mat and test.mat. In the command line, execute “python -i digitSVM.py”. For problem 1, call the function plotRateVsExamples() in the interpreter. For problem 2, call the function makeConfusionMatrices() to train the data and save multiple confusion matrices files. For problem 3, call the function crossValidation10fold(), which should output a list of cross-validation errors and the optimal value of the C parameter. The code for problem found can be found in spamSVM.py. The file should be adjacent to spam_data.mat. Like problem 3, you can call the function crossValidation10fold() to train the spam data.
+
